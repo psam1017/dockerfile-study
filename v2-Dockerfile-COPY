@@ -1,0 +1,10 @@
+FROM ubuntu
+
+# COPY : This command copies files or directories from the host system to the Docker image.
+# * : This wildcard character copies all files with the .txt extension from the host system to the Docker image.
+# .dockerignore : This file is used to exclude files and directories from the COPY command.
+COPY my-file.txt /my-file.txt
+COPY my-dir /my-dir/
+COPY *.txt /my-text-files/
+
+ENTRYPOINT ["/bin/bash", "-c", "sleep 300"]
