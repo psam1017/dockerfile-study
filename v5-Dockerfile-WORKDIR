@@ -1,0 +1,9 @@
+FROM ubuntu
+
+# WORKDIR : Set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
+WORKDIR /home/ubuntu/workdir
+
+COPY ./*.txt ./
+COPY ./my-dir/ ./my-dir/
+
+ENTRYPOINT ["/bin/bash", "-c", "sleep 300"]

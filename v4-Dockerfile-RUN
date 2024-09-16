@@ -1,0 +1,7 @@
+FROM ubuntu
+
+# RUN : Run a command while building the image
+RUN apt update && apt install -y git
+
+# ENTRYPOINT : Run a command when the container starts
+ENTRYPOINT ["/bin/bash", "-c", "sleep 300"]

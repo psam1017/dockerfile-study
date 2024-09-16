@@ -1,4 +1,5 @@
 # Dockerfile is a text file that contains a list of commands that the Docker client calls while creating an image.
+
 # To build a Docker image, you need to create a Dockerfile with the following syntax:
 # docker build -t [image name]:[tag] .
 # -t : Tag
@@ -10,7 +11,6 @@
 # FROM [image name]
 FROM openjdk:17-jdk
 
-# Tips
 # docker container will be finished if there is no process running in the container.
 # So, to debug a container which was not started, add the following command to this Dockerfile:
 # stop system for 300 seconds
